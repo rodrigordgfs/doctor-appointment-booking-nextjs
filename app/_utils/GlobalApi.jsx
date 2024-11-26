@@ -16,6 +16,12 @@ const getCategories = async () => {
   return data;
 };
 
+const getDoctors = async () => {
+  const { data } = await client.get("/doctors?populate=*");
+  return data;
+};
+
 export default {
   getCategories,
+  getDoctors,
 };
